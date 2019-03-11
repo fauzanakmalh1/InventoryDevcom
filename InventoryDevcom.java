@@ -13,6 +13,16 @@ class Barang {
 
 public class InventoryDevcom {
 
+    static int totalHarga(Barang[] bs){
+
+        int sum = 0;
+        for (int i = 0; i < 5; i++){
+        sum += bs[i].harga;
+        }
+
+        return sum;
+    }
+
     static void print(Barang[] barangs) {
         //print
         for (int i = 0; i < 5; i++) {
@@ -21,7 +31,9 @@ public class InventoryDevcom {
                 barangs[i].id,
                 barangs[i].nama,
                 barangs[i].harga);
-        }
+            }
+
+        System.out.printf("Total Harga: %d", totalHarga(barangs));
     }
     public static void main(String[] args) {
         Barang[] barangs = new Barang[5];
@@ -45,7 +57,6 @@ public class InventoryDevcom {
         // }
 
         // Instansiasi
-        // Barang-barang = new Barang(1, "Macbook Pro 2018", 2000)
         // Barang barang = new Barang(1,"Macbook Pro 2018", 2000);
 
         //cout << x << endl;
